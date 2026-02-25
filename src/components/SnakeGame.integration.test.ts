@@ -247,7 +247,7 @@ describe('Autopilot Integration - Comprehensive Tests', () => {
     it('should reach nearby food', () => {
       const snake = [{ x: 5, y: 5 }, { x: 5, y: 6 }, { x: 5, y: 7 }];
       const food = { x: 8, y: 5 };
-      const direction = 'RIGHT';
+      let direction = 'RIGHT';
       
       let currentSnake = [...snake];
       let currentDirection = direction;
@@ -277,7 +277,7 @@ describe('Autopilot Integration - Comprehensive Tests', () => {
     it('should navigate for 100 steps without dying', () => {
       let snake: Position[] = [{ x: 10, y: 10 }, { x: 10, y: 11 }, { x: 10, y: 12 }];
       let food = spawnFood(snake);
-      const direction = 'RIGHT';
+      let direction = 'RIGHT';
       let steps = 0;
 
       for (let step = 0; step < 100; step++) {
@@ -307,7 +307,7 @@ describe('Autopilot Integration - Comprehensive Tests', () => {
     it('should survive 500 steps with growing snake', () => {
       let snake: Position[] = [{ x: 10, y: 10 }, { x: 10, y: 11 }, { x: 10, y: 12 }];
       let food = spawnFood(snake);
-      const direction = 'RIGHT';
+      let direction = 'RIGHT';
       let deaths = 0;
       let foodEaten = 0;
       let maxSnakeLength = snake.length;
@@ -342,7 +342,7 @@ describe('Autopilot Integration - Comprehensive Tests', () => {
     it('should survive 1000+ steps (long-term test)', () => {
       let snake: Position[] = [{ x: 10, y: 10 }, { x: 10, y: 11 }, { x: 10, y: 12 }];
       let food = spawnFood(snake);
-      const direction = 'RIGHT';
+      let direction = 'RIGHT';
       let deaths = 0, foodEaten = 0, maxSnakeLength = snake.length;
       for (let step = 0; step < 1000; step++) {
         direction = decideNextDirection(snake, food, direction);
@@ -401,7 +401,7 @@ describe('Autopilot Integration - Comprehensive Tests', () => {
     it('should handle food in corner', () => {
       const snake = [{ x: 5, y: 5 }, { x: 5, y: 6 }];
       const food = { x: 0, y: 0 };
-      const direction = 'RIGHT';
+      let direction = 'RIGHT';
       let currentSnake = [...snake];
       let currentDirection = direction;
       let survived = 0;
@@ -429,7 +429,7 @@ describe('Autopilot Integration - Comprehensive Tests', () => {
         { x: 5, y: 4 },
       ];
       const food = { x: 3, y: 5 };
-      const direction = 'RIGHT';
+      let direction = 'RIGHT';
       
       let currentSnake = [...snake];
       let currentDirection = direction;
@@ -456,7 +456,7 @@ describe('Autopilot Integration - Comprehensive Tests', () => {
     it('should not oscillate infinitely', () => {
       const snake = [{ x: 10, y: 10 }, { x: 10, y: 11 }];
       const food = { x: 15, y: 10 };
-      const direction = 'RIGHT';
+      let direction = 'RIGHT';
       
       let currentSnake = [...snake];
       let currentDirection = direction;
