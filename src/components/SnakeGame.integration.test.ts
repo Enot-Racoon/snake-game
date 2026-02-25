@@ -247,7 +247,7 @@ describe('Autopilot Integration - Comprehensive Tests', () => {
     it('should reach nearby food', () => {
       const snake = [{ x: 5, y: 5 }, { x: 5, y: 6 }, { x: 5, y: 7 }];
       const food = { x: 8, y: 5 };
-      let direction = 'RIGHT';
+      const direction = 'RIGHT';
       
       let currentSnake = [...snake];
       let currentDirection = direction;
@@ -401,7 +401,7 @@ describe('Autopilot Integration - Comprehensive Tests', () => {
     it('should handle food in corner', () => {
       const snake = [{ x: 5, y: 5 }, { x: 5, y: 6 }];
       const food = { x: 0, y: 0 };
-      let direction = 'RIGHT';
+      const direction = 'RIGHT';
       let currentSnake = [...snake];
       let currentDirection = direction;
       let survived = 0;
@@ -429,7 +429,7 @@ describe('Autopilot Integration - Comprehensive Tests', () => {
         { x: 5, y: 4 },
       ];
       const food = { x: 3, y: 5 };
-      let direction = 'RIGHT';
+      const direction = 'RIGHT';
       
       let currentSnake = [...snake];
       let currentDirection = direction;
@@ -456,7 +456,7 @@ describe('Autopilot Integration - Comprehensive Tests', () => {
     it('should not oscillate infinitely', () => {
       const snake = [{ x: 10, y: 10 }, { x: 10, y: 11 }];
       const food = { x: 15, y: 10 };
-      let direction = 'RIGHT';
+      const direction = 'RIGHT';
       
       let currentSnake = [...snake];
       let currentDirection = direction;
