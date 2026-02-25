@@ -211,7 +211,7 @@ export function SnakeGame() {
 
     gameLoopRef.current = window.setTimeout(moveSnake, gameSpeed);
     return () => { if (gameLoopRef.current) clearTimeout(gameLoopRef.current); };
-  }, [autopilot, snake, food, gameOver, isPaused, gameStarted, score, highScore, gameSpeed]);
+  }, [autopilot, autopilotDecide, snake, food, gameOver, isPaused, gameStarted, score, highScore, gameSpeed]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
