@@ -460,7 +460,7 @@ describe('Autopilot Integration - Comprehensive Tests', () => {
       
       let currentSnake = [...snake];
       let currentDirection = direction;
-      let directions: Direction[] = [];
+      const directions: Direction[] = [];
       
       for (let i = 0; i < 20; i++) {
         currentDirection = decideNextDirection(currentSnake, food, currentDirection);
