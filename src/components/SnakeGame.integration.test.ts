@@ -369,7 +369,7 @@ describe('Autopilot Integration - Comprehensive Tests', () => {
       }
       
       let food = spawnFood(snake);
-      const direction = 'DOWN';
+      let direction = 'DOWN';
       let survived = 0;
       
       for (let i = 0; i < 100; i++) {
